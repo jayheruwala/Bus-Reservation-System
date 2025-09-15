@@ -1,0 +1,224 @@
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --danger: #dc2626;
+            --danger-dark: #b91c1c;
+            --success: #059669;
+            --success-dark: #047857;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --background: #f3f4f6;
+            --card: #ffffff;
+            --border: #e5e7eb;
+            --input-bg: #f9fafb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 30px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        
+        .card {
+            background-color: var(--card);
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 30px;
+            position: relative;
+        }
+        
+        .card-header h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            letter-spacing: -0.025em;
+        }
+        
+        .card-header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        .card-body {
+            padding: 35px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.9rem;
+            letter-spacing: 0.025em;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            padding-left: 45px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            color: var(--text);
+            background: var(--input-bg);
+            height: 50px;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+            background: var(--card);
+        }
+        
+        .form-icon {
+            position: absolute;
+            top: calc(50% + 16px);  /* Adjusted to account for label height */
+            left: 16px;
+            color: var(--text-light);
+            font-size: 16px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            transition: all 0.2s ease;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Remove the duplicate phone icon rotation */
+        .fa-phone.form-icon {
+            top: calc(50% + 1px);
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        /* Remove duplicate form-control padding declaration */
+        .form-control {
+            padding: 14px 18px 14px 45px;
+        }
+        .form-control:focus + .form-icon {
+            color: var(--primary);
+        }
+        
+        .fa-phone.form-icon {
+            transform: translateY(-50%) rotate(95deg);
+        }
+        
+        select.form-control {
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M8 10.293l4.146-4.147a.5.5 0 0 1 .708.708L8.707 11a1 1 0 0 1-1.414 0L3.146 6.854a.5.5 0 1 1 .708-.708L8 10.293z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 18px center;
+            background-size: 14px;
+        }
+        
+        .card-footer {
+            padding: 25px 35px;
+            background-color: var(--input-bg);
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.025em;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+        
+        .btn-danger {
+            background: var(--card);
+            color: var(--danger);
+            border: 1px solid var(--border);
+        }
+        
+        .btn-danger:hover {
+            background: var(--danger);
+            color: white;
+            border-color: var(--danger);
+        }
+        
+        .form-note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 6px;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .form-col {
+            flex: 1;
+        }
+        
+        @media (max-width: 640px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .card-header {
+                padding: 25px;
+            }
+            
+            .card-body, .card-footer {
+                padding: 25px;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .card-footer {
+                flex-direction: column-reverse;
+            }
+        }
+    

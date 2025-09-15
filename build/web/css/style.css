@@ -1,0 +1,121 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Hero Section */
+.page-hero {
+  background: linear-gradient(135deg, #1a3a8f 0%, #0f2557 100%);
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #ffdd59;
+}
+
+.page-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Info Section */
+.page-info {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: white;
+}
+
+.page-info h2 {
+  font-size: 2.5rem;
+  color: #0f2557;
+  margin-bottom: 1rem;
+}
+
+.page-info p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #666;
+}
+
+.page-info .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-box {
+  padding: 2rem;
+  background: #f5f7fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+  font-size: 1.5rem;
+  color: #1a3a8f;
+  margin-bottom: 1rem;
+}
+
+/* CTA Section */
+.page-cta {
+  background: linear-gradient(135deg, #1a3a8f 0%, #0f2557 100%);
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.page-cta h2 {
+  font-size: 2.5rem;
+  color: #ffdd59;
+}
+
+.page-cta .cta-btn {
+  display: inline-block;
+  background-color: #ffdd59;
+  color: #0f2557;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.page-cta .cta-btn:hover {
+  background-color: #ffd32a;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2.5rem;
+  }
+  .page-info h2, .page-cta h2 {
+    font-size: 2rem;
+  }
+}
